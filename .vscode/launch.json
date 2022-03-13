@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug smartzoom",
+      "program": "${workspaceFolder:smartzoom}/.build/debug/smartzoom",
+      "args": [],
+      "cwd": "${workspaceFolder:smartzoom}",
+      "preLaunchTask": "swift: Build Debug smartzoom"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Release smartzoom",
+      "program": "${workspaceFolder:smartzoom}/.build/release/smartzoom",
+      "args": [],
+      "cwd": "${workspaceFolder:smartzoom}",
+      "preLaunchTask": "swift: Build Release smartzoom"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Test smartzoom",
+      "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+      "args": [
+        ".build/debug/smartzoomPackageTests.xctest"
+      ],
+      "cwd": "${workspaceFolder:smartzoom}",
+      "preLaunchTask": "swift: Build All"
+    }
+  ]
+}

@@ -15,3 +15,5 @@ To build, run
 ```
 swift build
 ```
+
+You'll need to grant Accessibility permission, but the app will prompt you.
