@@ -42,12 +42,12 @@ func magnify() {
     // I don't know why, but it only works if this is doubled
     doMagnify(phase: 1, magnification: 0)
     doMagnify(phase: 1, magnification: 0)
-
+    
     for _ in 1...15 {
         doMagnify(phase: 2, magnification: 0.02)
         usleep(16666)
     }
-
+    
     doMagnify(phase: 4, magnification: 0)
 }
 
@@ -55,12 +55,12 @@ func magnifyReset() {
     // I don't know why, but it only works if this is doubled
     doMagnify(phase: 1, magnification: 0)
     doMagnify(phase: 1, magnification: 0)
-
+    
     for _ in 1...15 {
         doMagnify(phase: 2, magnification: -0.1)
         usleep(16666)
     }
-
+    
     doMagnify(phase: 4, magnification: 0)
 }
 
@@ -68,7 +68,7 @@ func magnifyReset() {
 switch CommandLine.arguments[1] {
 case "smart":
     smartZoom()
-
+    
 case "magnify":
     magnify()
 
@@ -78,3 +78,5 @@ case "magnify-reset":
 default:
     smartZoom()
 }
+
+
